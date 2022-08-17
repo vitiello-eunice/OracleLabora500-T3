@@ -1,0 +1,33 @@
+<meta charset="UTF-8">
+
+<script>
+
+	function pulaLinha() {
+		document.write("<br>");
+	}
+
+	//função que recebe parâmetro
+
+	function mostra(frase) {
+
+        document.write(frase);
+        pulaLinha();
+    }
+
+	
+mostra("<h3>Imprimir 3 linhas de asteriscos</h3>")
+
+//espaço 1 = variável de inicialização que será incrementada; espaço 2 = condição para o for parar de repetir o que está dentro do seu bloco + espaço 3 = incremento de 1 por 1
+
+for(var linha = 1; linha <= 3; linha++) {
+	
+	for(var coluna = 1; coluna <= 10; coluna++) {
+		document.write("*")
+	}
+
+	//para não ter de escrever 10 asteriscos uso um for dentro do primeiro for informando quantas colunas quero e depois um pulaLinha, senão fica tudo na mesma linha
+	
+	pulaLinha();
+}
+
+</script>

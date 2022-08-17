@@ -1,0 +1,43 @@
+<meta charset="UTF-8">
+
+<script>
+
+mostra("<h3>Transformando texto em número</h3>")
+
+	function pulaLinha() {
+		document.write("<br>");
+		document.write("<br>");
+	}
+
+	function mostra(frase) {
+		document.write(frase);
+		pulaLinha();
+	}
+
+
+	var vitorias = parseInt(prompt("Entre com o número de vitórias"));
+	var empates = parseInt(prompt("Entre com o número de empates"));
+
+	var pontos = vitorias * 3 + empates;
+
+	mostra("A pontuação do seu time é: " + pontos);
+
+	if(pontos > 28) {
+		mostra("Seu time está melhor do que o ano passado.");
+	}
+
+	if(pontos < 28) {
+		mostra("Seu time está pior do que o ano passado.");
+	}
+
+	if(pontos == 28) {
+		mostra("Seu time está igual ao ano passado.");
+	}
+
+	mostra("FIM");
+
+	mostra("<i>A função parseInt transforma texto (string) em número, se não, quando eu for fazer uma soma, ao invés de somar o JavaScript faz concatenação. Sem a função só funcionam a multiplicação e a divisão.Para melhorar o programa e comparar resultados se usa o if que também é uma função e, portante seus parâmetros ficam entre chaves.</i>");
+
+
+</script>
+

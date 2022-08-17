@@ -1,0 +1,104 @@
+<meta charset="UTF-8">
+
+<script>
+
+	function pulaLinha() {
+		document.write("<br><br>");
+	}
+
+	//função que recebe parâmetro
+
+	function mostra(frase) {
+
+        document.write(frase);
+        pulaLinha();
+    }
+
+	function sorteia(n) {
+
+        return Math.round(Math.random() * n);
+    }    
+
+	mostra("<h3>Exercício 1 | Todos os números pares de 1 a 100</h3>");
+	
+	var numerosPares = 2;
+	var limite = 100;
+
+	while(numerosPares <= limite) {
+		mostra(numerosPares);
+		numerosPares = numerosPares + 2;
+
+	}
+
+	mostra("FIM");
+
+	mostra("<h3>Exercício 2 | Todos os números entre 30 a 40, exceto 33 e 37</h3>");
+
+	var contador = 30;
+
+	while(contador <= 40) {
+		
+		if(contador == 33) {
+			contador = contador + 1;
+		}
+
+		else if(contador == 37) {
+		contador = contador + 1;
+		}
+
+		else {
+		mostra(contador);
+		contador = contador + 1;
+			}
+
+	}	
+
+	mostra("FIM");
+
+mostra("<h3>Exercício 3 | Todos os números de 20 a 0</h3>");
+
+var contador = 20;
+
+while(contador >= 0) {
+	mostra(contador);
+	contador = contador -1;
+}
+
+mostra("FIM");
+
+
+mostra("<h3>Exercício 3 | Simulando uma tela de login</h3>");
+
+	var loginCadastrado = "alura";
+    var senhaCadastrada = "alura321";
+
+    var maximoTentativas = 3;
+    var tentativaAtual = 1;
+
+    while(tentativaAtual <= maximoTentativas) {
+
+        var loginInformado = prompt("Informe seu login");
+        var senhaInformada = prompt("Informe sua senha");
+
+        if( loginCadastrado == loginInformado && senhaCadastrada == senhaInformada ) {
+
+            alert("Bem-vindo ao sistema, " + loginInformado);
+
+            tentativaAtual = maximoTentativas; // acertou, então faço o gasto de todas as tentativas para sair do loop. Lá embaixo vai incrementar + 1! 
+
+        } else {
+
+            if (tentativaAtual == 3) {
+                alert("Número permitido de tentativas ultrapassado!");
+            } else {
+                alert("Login inválido. Tente novamente");
+            }
+        }
+
+       // vai para a próxima tentativa
+        tentativaAtual = tentativaAtual +1  
+    }
+
+   
+
+</script>

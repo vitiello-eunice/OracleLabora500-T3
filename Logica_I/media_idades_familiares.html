@@ -1,0 +1,41 @@
+<meta charset="UTF-8">
+
+<script>
+
+	function pulaLinha() {
+		document.write("<br><br>");
+	}
+
+	//função que recebe parâmetro
+
+	function mostra(frase) {
+
+        document.write(frase);
+        pulaLinha();
+    }
+
+	function sorteia(n) {
+
+        return Math.round(Math.random() * n);
+    }    
+
+	mostra("<h3>Media idades familiares</h3>");
+	
+	var totalFamiliares = parseInt(prompt("Quantidade de familiares? "));
+
+	var numero = 1;
+	var totalIdades = 0;
+	
+	while(numero <= totalFamiliares) {
+		
+		var idade = parseInt(prompt("informe idade do familiar"));
+		totalIdades = totalIdades + idade;
+		numero++;
+	}
+
+	var mediaDasIdades = totalIdades / totalFamiliares;
+	mostra("A média das idades dos familiares é: " + mediaDasIdades);
+	
+	mostra("FIM");
+s
+</script>

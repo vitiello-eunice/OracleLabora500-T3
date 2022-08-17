@@ -1,0 +1,33 @@
+<meta charset="UTF-8">
+
+<script>
+
+	function pulaLinha() {
+		document.write("<br><br>");
+	}
+
+	//função que recebe parâmetro
+
+	function mostra(frase) {
+
+        document.write(frase);
+        pulaLinha();
+    }
+
+	function sorteia(n) {
+
+        return Math.round(Math.random() * n);
+    }    
+
+	mostra("<h3>Tabuada com for</h3>");
+	
+	
+	for(var multiplicador = 1; multiplicador <= 10; multiplicador++) {
+		
+		mostra(7 * multiplicador);
+		
+	}
+
+	mostra ("FIM");
+
+</script>

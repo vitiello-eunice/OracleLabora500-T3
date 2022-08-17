@@ -1,0 +1,90 @@
+<meta charset="UTF-8">
+
+<h2>Calcular ano de nascimento</h2>
+
+<script>
+
+	document.write("Flávio nasceu em " + (2016 - 39));
+	document.write("<br>");
+	document.write("Joaquim nasceu em " + (2016 - 20));
+	document.write("<br>");
+	document.write("Barney nasceu em " + (2016 - 40));
+
+
+ </script>
+
+<h2>Calcular idade</h2>
+
+<script>
+
+	document.write("Flávio tem " + (2016 - 1977) + " anos");
+	document.write("<br>");
+	document.write("Joaquim tem " + (2016 - 1996) + " anos");
+	document.write("<br>");
+	document.write("Barney tem " + (2016 - 1976) + " anos");
+ 
+
+ </script>
+
+<br>
+<br>
+
+<h2>Uma forma de automatizar usando variáveis</h2>
+
+<script>
+
+	function pulaLinha() {
+		document.write("<br><br>")
+	}
+
+	//função que recebe parâmetro
+
+	function mostra(frase) {
+
+		document.write(frase);
+		pulaLinha();
+	}
+
+	var ano = 2022;
+
+	//document.write("Flávio tem " + (ano - 1977) + " anos");
+	mostra("Flávio tem " + (ano - 1977) + " anos"); 
+
+	//document.write("Joaquim tem " + (ano - 1996) + " anos");
+	mostra("Joaquim tem " + (ano - 1996) + " anos");
+
+	ano = 2021
+
+	mostra("Ao reatribuir uma variável - aqui mudei o ano atual - não é necessário utilizar o var, somente o ano e o seu novo conteúdo")
+
+	// document.write("Barney tem " + (ano - 1976) + " anos");
+	mostra("Barney tem " + (ano - 1976) + " anos");
+
+	var idadeFlavio = (ano - 1977);
+	var idadeJoaqui = (ano - 1996);
+	var idadeBarney = (ano - 1976);
+
+	var media = (idadeFlavio + idadeJoaqui + idadeBarney)/3;
+
+	mostra('A média das idades é ' + Math.round(media));
+
+	var nome = "Flavio";
+
+	mostra("A idade de " + nome + " é " + idadeFlavio + " anos");
+
+ </script>
+
+
+<h2>Usando variáveis em cálculos</h2>
+
+Amanda esteve muito ocupada e não teve tempo de finalizar um trabalho em grupo. Seus amigos, desesperados, precisam terminar o programa para conseguirem um ponto que pode ajudá-los a passar na matéria. O código era o seguinte:
+<br>
+<br>
+
+
+<script>
+
+	var n = 2;
+   
+    document.write("O resultado da fórmula é : " + n * (10 / 20)  );
+</script>
