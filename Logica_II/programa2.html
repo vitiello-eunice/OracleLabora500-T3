@@ -1,0 +1,47 @@
+<h4>Estruturas de Repetições</h4>
+
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+  function desenhaQuadrado(x, y, cor) {
+
+    var tela = document.querySelector ('canvas');
+    var pincel = tela.getContext('2d');
+    pincel.fillStyle = cor;
+    pincel.fillRect(x, y, 50, 50);
+    pincel.fillStroke = 'black';
+    pincel.strokeRect (x, y, 50, 50);
+
+
+    //substituímos o valor do eixo x por uma variável x, assim podemos chamar
+    //função e deslocar os quadradinhos de lugar
+  }
+
+  desenhaQuadrado(0, 0, 'blue'); // se não chamar a função não aparece nada
+  desenhaQuadrado(0, 50, 'red');
+  desenhaQuadrado(0, 100, 'yellow');
+
+  desenhaQuadrado(50, 0, 'green');
+  desenhaQuadrado(100, 0, 'green');
+  desenhaQuadrado(150, 0, 'green');
+
+/*
+var x = 0;
+
+while (x < 600) {
+    desenhaQuadrado(x, 150, 'green');
+    desenhaQuadrado(x, 200, 'blue');
+    x = x + 50;
+}
+*/
+
+//para x igual a 0 em um campo de 600px me desenha um quadrado a cada 50px
+for(var x = 0; x < 600; x = x + 50) {
+      desenhaQuadrado(x, 150, 'green');
+      desenhaQuadrado(x, 200, 'blue');
+}
+
+
+
+</script>

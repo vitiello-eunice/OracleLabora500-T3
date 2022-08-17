@@ -1,0 +1,50 @@
+<h4>Desenhamos um círculo, e dai?</h4>
+
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+  var tela = document.querySelector ('canvas');
+  var pincel = tela.getContext('2d');
+  pincel.fillStyle = 'lightgray';
+  pincel.fillRect(0,0,600,400);
+
+  function desenhaCirculo(x, y, raio) { //define parâmetros
+    pincel.fillStyle = 'blue'; //informa cor do desenho
+    pincel.beginPath(); //pede para iniciar o desenho
+    pincel.arc(x, y, raio, 0, 2 * Math.PI); //informa início e fim do desenho
+    pincel.fill(); //comando para pintar o desenho
+  }
+
+  function limpaTela() {
+
+    pincel.clearRect(0, 0, 600, 400); // apaga a bolinha anterior para dar a ilusão de movimento
+
+  }
+
+/*
+Toda vez que atualizaTela for chamada, o valor de x deve ser atualizado
+para que na próxima chamada da função pelo setInterval a bolinha seja
+desenhada em uma nova posição.
+
+Quando declarada fora de uma função, a variável é acessível por qualquer
+outra função do nosso programa.
+*/
+  var x = 20;
+
+  function atualizaTela() {
+
+      limpaTela(); // para apagar a bolinha anterior se não fica uma linha cheia
+      desenhaCirculo(x, 20, 10); // informo os valores dos parâmetros para executar a função
+      x++; //20 + 1 e assim por diante
+  }
+
+  setInterval(atualizaTela, 10); //o 2º parâmetro é o tempo: 10ms
+
+ /*
+a função setInterval que já vem pronta no JavaScript precisa receber
+dois parâmetros para funcionar. O primeiro é a função que ela deve
+chamar e o segundo o intervalo de tempo no qual a função deve ser chamada.
+ */
+
+</script>
